@@ -20,7 +20,7 @@ cd tbo_lib
 
 ## 3. Check the files:
 
-Ensure that the files tbo_lib.h and tbolib.c are present in the directory. These are the main files of the library.
+Ensure that the files tbo_lib.h and tbo_lib.c are present in the directory. These are the main files of the library.
 
 
 ## 4. Integrate the library into your project:
