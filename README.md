@@ -82,5 +82,3 @@ After successful compilation, execute the generated program:
 ```bash
 ./your_program
 ```
-
-# Adding the functions to your code
