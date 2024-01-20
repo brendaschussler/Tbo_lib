@@ -75,7 +75,7 @@ gcc your_code.c tbo_lib.c -o your_program
 ```
 Replace your_code.c with the name of your source code file.
 
-## 7. Execute your code:
+## 7. Run your code:
 
 After successful compilation, execute the generated program:
 
