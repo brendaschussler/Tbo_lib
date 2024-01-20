@@ -35,14 +35,16 @@ At the beginning of your source code, include the tbo_lib.h header using the #in
 ```bash
 #include "tbo_lib.h"
 ```
-## 5.2. 
-Declare uma variável do tipo BlockSizes. Esta armazenará os valores de thread_x e thread_y que serão passados para o kernel enviado à execução. 
-Dentro do loop onde o kernel é executado, anterior à chamada do kernel faça a variável que você criou anteriormente receber a função "before_kernel", passando como parâmetros para ela, em sequência, o iterador do loop e a variável declarada do tipo BlockSizes. 
-Em seguida insira a chamada do kernel, passando a ele os valores "nome_variavel.bsize_x" e "nome_variavel.bsize_y" como parâmetros de número de threads por bloco nas dimensões x e y respectivamente. Colete o tempo de execução do kernel e armazene-o em uma variável do tipo double. 
-Após a execução do kernel, faça a variável declarada do tipo BlockSizes receber o retorno da execução da função "genetic_exec", passando como parâmetros para ela, em sequência, o iterador do loop e a variável que armazena o tempo de execução do kernel. 
-É importante observar o valor de inicialização do iterador, de modo que, quando passado pela primeira vez como parâmetro das funções o seu valor seja igual a zero. Se for necessário iniciar o seu iterador com um valor diferente de zero, como por exemplo 1, passe o valor (iterador-1) como parâmetro para as funções. 
+## 5.2. Including library functions in your code
 
-Exemplo de inserção das funções da biblioteca no código: 
+* Declare a variable of type BlockSizes. This will store the values of thread_x and thread_y to be passed to the kernel during execution.
+* Inside the loop where the kernel is executed, before the kernel call, assign the previously created variable the function "before_kernel," passing the loop iterator and the declared variable of type BlockSizes as parameters in sequence.
+* Next, insert the kernel call, passing to it the values "variable_name.bsize_x" and "variable_name.bsize_y" as parameters for the number of threads per block in the x and y dimensions, respectively. Measure the kernel execution time and store it in a variable of type double.
+* After the kernel execution, assign the declared variable of type BlockSizes the return value of the "genetic_exec" function, passing the loop iterator and the variable storing the kernel execution time as parameters in sequence. 
+* It is important to note the initialization value of the iterator so that when passed for the first time as a parameter to the functions, its value is equal to zero. If it is necessary to start the iterator with a different value than zero, such as 1, pass the value (iterator-1) as a parameter to the functions.
+
+Example of inserting library functions into the code:
+
 ```bash
 #include "tbo_lib.h"
 
